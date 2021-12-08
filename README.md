@@ -11,3 +11,14 @@
 
 ### US#4: [MVP] Le panier
 * Critère 1 à 2
+
+### US#5 : [MVP] Profil utilisateur 
+* Critère 1 à 4
+
+###US#6 : Filtrer sur la liste des vêtements
+
+
+## Ajouts supplémentaires
+* Register avec confirmation de mot de passe
+* Login/Register avec Google
+* Dans la page profil, l'utilisateur peut ajouter une image en l'uploadant depuis son téléphone, il peut changer sa date d'anniversaire dpeuis un bouton calendar. 

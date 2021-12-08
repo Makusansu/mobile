@@ -683,6 +683,7 @@ class _ProfilWidgetState extends State<ProfilWidget> {
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 12),
                     child: TextFormField(
+
                       onChanged: (_) => EasyDebounce.debounce(
                         'postaleController',
                         Duration(milliseconds: 2000),
@@ -700,7 +701,7 @@ class _ProfilWidgetState extends State<ProfilWidget> {
                           fontSize: 14,
                           fontWeight: FontWeight.normal,
                         ),
-                        hintText: 'Votre adresse',
+                        hintText: 'Votre code postal',
                         hintStyle: FlutterFlowTheme.bodyText1.override(
                           fontFamily: 'Lexend Deca',
                           color: Color(0xFF95A1AC),
@@ -745,7 +746,7 @@ class _ProfilWidgetState extends State<ProfilWidget> {
                         fontWeight: FontWeight.normal,
                       ),
                       textAlign: TextAlign.justify,
-                      keyboardType: TextInputType.streetAddress,
+                      keyboardType: TextInputType.number,
                     ),
                   ),
                   Align(
