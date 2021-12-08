@@ -317,6 +317,7 @@ class _CartWidgetState extends State<CartWidget> {
                                                       await cartListPanierRecord
                                                           .reference
                                                           .delete();
+                                                      totalPrice();
                                                     },
                                                   )
                                                 ],
