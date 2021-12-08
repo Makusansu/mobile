@@ -83,7 +83,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Text(
-                                    'Sign In',
+                                    'Log In',
                                     style: FlutterFlowTheme.subtitle1.override(
                                       fontFamily: 'Lexend Deca',
                                       color: Colors.white,
@@ -164,7 +164,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                             controller: emailAddressController,
                             obscureText: false,
                             decoration: InputDecoration(
-                              labelText: 'Email Address',
+                              labelText: 'Login',
                               labelStyle: FlutterFlowTheme.bodyText1.override(
                                 fontFamily: 'Lexend Deca',
                                 color: Color(0x98FFFFFF),

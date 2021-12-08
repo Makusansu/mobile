@@ -23,6 +23,9 @@ abstract class PanierRecord
   String get genre;
 
   @nullable
+  String get taille;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
@@ -30,7 +33,8 @@ abstract class PanierRecord
     ..image = ''
     ..name = ''
     ..prix = 0.0
-    ..genre = '';
+    ..genre = ''
+    ..taille = '';
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('Panier');
@@ -54,6 +58,7 @@ Map<String, dynamic> createPanierRecordData({
   String name,
   double prix,
   String genre,
+  String taille,
 }) =>
     serializers.toFirestore(
         PanierRecord.serializer,
@@ -61,4 +66,5 @@ Map<String, dynamic> createPanierRecordData({
           ..image = image
           ..name = name
           ..prix = prix
-          ..genre = genre));
+          ..genre = genre
+          ..taille = taille));

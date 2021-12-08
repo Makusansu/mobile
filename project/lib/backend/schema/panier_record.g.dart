@@ -48,6 +48,13 @@ class _$PanierRecordSerializer implements StructuredSerializer<PanierRecord> {
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
+    value = object.taille;
+    if (value != null) {
+      result
+        ..add('taille')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
     value = object.reference;
     if (value != null) {
       result
@@ -86,6 +93,10 @@ class _$PanierRecordSerializer implements StructuredSerializer<PanierRecord> {
           result.genre = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'taille':
+          result.taille = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'Document__Reference__Field':
           result.reference = serializers.deserialize(value,
                   specifiedType: const FullType(
@@ -109,13 +120,20 @@ class _$PanierRecord extends PanierRecord {
   @override
   final String genre;
   @override
+  final String taille;
+  @override
   final DocumentReference<Object> reference;
 
   factory _$PanierRecord([void Function(PanierRecordBuilder) updates]) =>
       (new PanierRecordBuilder()..update(updates)).build();
 
   _$PanierRecord._(
-      {this.image, this.name, this.prix, this.genre, this.reference})
+      {this.image,
+      this.name,
+      this.prix,
+      this.genre,
+      this.taille,
+      this.reference})
       : super._();
 
   @override
@@ -133,14 +151,17 @@ class _$PanierRecord extends PanierRecord {
         name == other.name &&
         prix == other.prix &&
         genre == other.genre &&
+        taille == other.taille &&
         reference == other.reference;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc($jc(0, image.hashCode), name.hashCode), prix.hashCode),
-            genre.hashCode),
+        $jc(
+            $jc($jc($jc($jc(0, image.hashCode), name.hashCode), prix.hashCode),
+                genre.hashCode),
+            taille.hashCode),
         reference.hashCode));
   }
 
@@ -151,6 +172,7 @@ class _$PanierRecord extends PanierRecord {
           ..add('name', name)
           ..add('prix', prix)
           ..add('genre', genre)
+          ..add('taille', taille)
           ..add('reference', reference))
         .toString();
   }
@@ -176,6 +198,10 @@ class PanierRecordBuilder
   String get genre => _$this._genre;
   set genre(String genre) => _$this._genre = genre;
 
+  String _taille;
+  String get taille => _$this._taille;
+  set taille(String taille) => _$this._taille = taille;
+
   DocumentReference<Object> _reference;
   DocumentReference<Object> get reference => _$this._reference;
   set reference(DocumentReference<Object> reference) =>
@@ -192,6 +218,7 @@ class PanierRecordBuilder
       _name = $v.name;
       _prix = $v.prix;
       _genre = $v.genre;
+      _taille = $v.taille;
       _reference = $v.reference;
       _$v = null;
     }
@@ -217,6 +244,7 @@ class PanierRecordBuilder
             name: name,
             prix: prix,
             genre: genre,
+            taille: taille,
             reference: reference);
     replace(_$result);
     return _$result;

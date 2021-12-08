@@ -113,7 +113,7 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.home,
               size: 24,
             ),
-            label: 'Home',
+            label: 'Acheter',
             tooltip: '',
           ),
           BottomNavigationBarItem(
@@ -125,7 +125,7 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.person,
               size: 24,
             ),
-            label: 'Home',
+            label: 'Profil',
             tooltip: '',
           ),
           BottomNavigationBarItem(
@@ -137,7 +137,7 @@ class _NavBarPageState extends State<NavBarPage> {
               Icons.shopping_cart,
               size: 24,
             ),
-            label: 'Home',
+            label: 'Panier',
             tooltip: '',
           )
         ],
@@ -146,8 +146,8 @@ class _NavBarPageState extends State<NavBarPage> {
         selectedItemColor: FlutterFlowTheme.primaryColor,
         unselectedItemColor: FlutterFlowTheme.tertiaryColor,
         onTap: (i) => setState(() => _currentPage = tabs.keys.toList()[i]),
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
         type: BottomNavigationBarType.fixed,
       ),
     );

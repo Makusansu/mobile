@@ -244,6 +244,29 @@ class _CartWidgetState extends State<CartWidget> {
                                                                       .normal,
                                                             ),
                                                           ),
+                                                        ),
+                                                        Padding(
+                                                          padding:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(0,
+                                                                      4, 0, 4),
+                                                          child: Text(
+                                                            cartListPanierRecord
+                                                                .taille,
+                                                            style:
+                                                                FlutterFlowTheme
+                                                                    .bodyText1
+                                                                    .override(
+                                                              fontFamily:
+                                                                  'Lexend Deca',
+                                                              color: Color(
+                                                                  0xFF090F13),
+                                                              fontSize: 14,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .normal,
+                                                            ),
+                                                          ),
                                                         )
                                                       ],
                                                     ),
@@ -294,7 +317,6 @@ class _CartWidgetState extends State<CartWidget> {
                                                       await cartListPanierRecord
                                                           .reference
                                                           .delete();
-                                                       totalPrice();
                                                     },
                                                   )
                                                 ],
@@ -372,7 +394,7 @@ class _CartWidgetState extends State<CartWidget> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "Tax",
+                        'Tax',
                         style: FlutterFlowTheme.bodyText2.override(
                           fontFamily: 'Lexend Deca',
                           color: Color(0xFF8B97A2),
@@ -414,7 +436,7 @@ class _CartWidgetState extends State<CartWidget> {
                         ),
                       ),
                       Text(
-                        (totalIncome+tax).toString(),
+                        (totalIncome + tax).toString(),
                         textAlign: TextAlign.end,
                         style: FlutterFlowTheme.title3.override(
                           fontFamily: 'Lexend Deca',

@@ -221,6 +221,7 @@ class _DetailsWidgetState extends State<DetailsWidget> {
                             image: detailsProductsRecord.image,
                             name: detailsProductsRecord.name,
                             prix: detailsProductsRecord.prix,
+                            taille: dropDownValue,
                           );
                           await PanierRecord.collection
                               .doc()
@@ -233,7 +234,7 @@ class _DetailsWidgetState extends State<DetailsWidget> {
                             ),
                           );
                         },
-                        text: 'Buy Now',
+                        text: 'Ajouter au panier',
                         options: FFButtonOptions(
                           width: 170,
                           height: 50,
