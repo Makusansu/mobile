@@ -25,6 +25,7 @@ class _ListProductsWidgetState extends State<ListProductsWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       key: scaffoldKey,
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.darkBG,

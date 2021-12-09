@@ -43,6 +43,7 @@ class _ProfilWidgetState extends State<ProfilWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       key: scaffoldKey,
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.darkBG,
